@@ -1,0 +1,160 @@
+{
+	"cards" : {
+		"bes" : {
+			"name" : "Bes",
+			"type" : "Action",
+			"effect" : "Hit",
+			"points" : 1
+		},
+		"bajun" : {
+			"name" : "Cat-Bajun",
+			"type" : "Action",
+			"effect" : "Hit",
+			"points" : 1
+		},
+		"volkodlak" : {
+			"name" : "volkodlak",
+			"type" : "Action",
+			"effect" : "Hit",
+			"points" : 2
+		},
+		"sivka" : {
+			"name" : "Sivka-Burka",
+			"type" : "Action",
+			"effect" : "Hit",
+			"points" : 2
+		},
+		"skelet" : {
+			"name" : "Skelet",
+			"type" : "Action",
+			"effect" : "Hit",
+			"points" : 3
+		},
+		"Wolf" : {
+			"name" : "Grey Wolf",
+			"type" : "Action",
+			"effect" : "Hit",
+			"points" : 3
+		},
+		"upyr" : {
+			"name" : "Upyr",
+			"type" : "Action",
+			"effect" : "Hit",
+			"points" : 4
+		},
+		"bogatyr" : {
+			"name" : "Bogatyr",
+			"type" : "Action",
+			"effect" : "Hit",
+			"points" : 4
+		},
+		"apple" : {
+			"name" : "Golden Apple",
+			"type" : "Action",
+			"effect" : "Heal",
+			"points" : 3
+		},
+		"berehynia" : {
+			"name" : "Berehynia",
+			"type" : "Action",
+			"effect" : "Heal",
+			"points" : 5
+		},
+		"likhoradka" : {
+			"name" : "Likhoradka",
+			"type" : "Action",
+			"effect" : "Heal",
+			"points" : 5
+		},
+		"firebird" : {
+			"name" : "Firebird",
+			"type" : "Action",
+			"effect" : "Exchange All",
+			"points" : 0
+		},
+		"invisibility" : {
+			"name" : "Invisibility",
+			"type" : "Action",
+			"effect" : "Steal",
+			"points" : 0
+		},
+		"mirror" : {
+			"name" : "Magical Mirror",
+			"type" : "Item",
+			"effect" : "Reflect half",
+			"points" : 2
+		},
+		"ziva" : {
+			"name" : "Ziva Voda",
+			"type" : "Item",
+			"effect" : "+1 health turn",
+			"points" : 3
+		},
+		"mertva" : {
+			"name" : "Mertva Voda",
+			"type" : "Item",
+			"effect" : "-1 health turn",
+			"points" : 3
+		},
+		"kladenets" : {
+			"name" : "kladenets",
+			"type" : "Item",
+			"effect" : "+1 your hits",
+			"points" : 2
+		},
+		"shiels_s" : {
+			"name" : "Small Shield",
+			"type" : "Item",
+			"effect" : "protection",
+			"points" : 3
+		},
+		"shield_b" : {
+			"name" : "Big Shield",
+			"type" : "Item",
+			"effect" : "protection",
+			"points" : 5
+		}
+	},
+	"characters" : {
+		"koschei" : {
+			"name" : "Koschei Deathless",
+			"health": 13,
+			"deck": {
+				"bes" : 4,
+				"volkodlak" : 3,
+				"skelet" : 2,
+				"upyr" : 1,
+				"apple" : 1,
+				"likhoradka" : 1,
+				"firebird" : 1,
+				"invisibility" : 1,
+				"mirror" : 1,
+				"ziva" : 1,
+				"mertva" : 1,
+				"kladenets" : 1,
+				"shiels_s" : 1,
+				"shield_b" : 1
+			}
+		},
+		"ivan" : {
+			"name" : "Ivan Tsarevich",
+			"health": 11,
+			"deck" : {
+				"bajun" : 4,
+				"sivka" : 3,
+				"Wolf" : 2,
+				"bogatyr" : 1,
+				"apple" : 1,
+				"berehynia" : 1,
+				"firebird" : 1,
+				"invisibility" : 1,
+				"mirror" : 1,
+				"ziva" : 1,
+				"mertva" : 1,
+				"kladenets" : 1,
+				"shiels_s" : 1,
+				"shield_b" : 1
+			}
+		}
+	}
+}
