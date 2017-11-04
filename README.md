@@ -1,7 +1,6 @@
 # BITVA_cardgame
 A indie card game developed by me to experiment with test-driven development, React and React Native.
 Development steps:
-
 8 - Action points validation - Day 6.
 7 - Card type validation1, Action Points introduced - Day 5.
 6 - Game Action: Attack agains the sheeld, player heal - Day 4.
