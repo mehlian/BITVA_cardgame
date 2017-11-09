@@ -9,5 +9,6 @@ Day 5: Game Action: Attack agains the sheeld, player heal.
 Day 6: Card type validation1, Action Points introduced.
 Day 7: Action points validation.
 Day 8: Active player change on Discard, Set, Hit and Heal; Game Action: use Steal or Exchange.
-Day 9: Initial "is alive" check, Reflect half hits test,
+Day 9: Initial "is alive" check, Reflect half hits test, Refactoring hit function.
+Day 10: Continue refactoring hit function, Exchange all cards function in development.
 
