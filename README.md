@@ -11,4 +11,5 @@ Day 7: Action points validation.
 Day 8: Active player change on Discard, Set, Hit and Heal; Game Action: use Steal or Exchange.
 Day 9: Initial "is alive" check, Reflect half hits test, Refactoring hit function.
 Day 10: Continue refactoring hit function, Exchange all cards function in development.
+Day 11: Greyboxing index.html with Flexbox
 

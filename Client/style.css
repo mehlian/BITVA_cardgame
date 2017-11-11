@@ -1,0 +1,113 @@
+/* font-family: 'Delius', cursive; */
+body{
+	width: 600px;
+	height: 700px;
+}
+
+
+.gamearea {
+	width: 100%;
+	height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+ }
+
+ .gamearea div{
+ 	width: 100%;
+ 	text-align: center;
+}
+
+
+.middlePart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.topPart, .bottomPart {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+}
+
+ .heroCard{
+ 	order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    margin: 1em;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+ }
+
+ .heroAvatar, .heroDeck{
+ 	order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+ }
+
+
+ .heroCards{
+ 	order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+ }
+
+ #heroHand{
+    align-items: flex-start;
+ }
+
+ #enemyHand{
+ 	align-items:flex-end;
+ }
+
+ .item{
+ 	order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    margin: 1em;
+ }
+
+ .spanItem{
+
+ }
+
+ .card{
+ 	order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin: 1em;
+    border-style: solid;
+ }
+
+ .villanItem{
+ 	margin-bottom: 5em;
+ 	border-style: solid;
+ }
+
+ .heroItem{
+ 	margin-top: 5em;
+ 	border-style: solid;
+ }
