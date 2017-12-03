@@ -13,5 +13,5 @@ Development steps:
 	Day 9: Initial "is alive" check, Reflect half hits test, Refactoring hit function.
 	Day 10: Continue refactoring hit function, Exchange all cards function in development.
 	Day 11: Greyboxing index.html with Flexbox
-	Day 12: Changed structure for better action analysis. 
+	Day 12: Changed structure for better action analysis. Electron set up.
 
