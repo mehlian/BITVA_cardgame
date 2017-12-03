@@ -48,7 +48,7 @@ body{
     align-items: center;
 }
 
- .heroCard{
+ .playerArea{
  	order: 0;
     flex: 1 1 auto;
     align-self: auto;
@@ -62,7 +62,7 @@ body{
 
  }
 
- .heroAvatar, .heroDeck{
+ .playerAvatar, .playerDeck{
  	order: 0;
     flex: 1 1 auto;
     align-self: auto;
@@ -84,7 +84,7 @@ body{
     align-items: flex-start;
  }
 
- #enemyHand{
+ #villainHand{
  	align-items:flex-end;
  }
 
@@ -105,9 +105,10 @@ body{
     align-self: auto;
     margin: 1em;
     border-style: solid;
+    height: 100px;
  }
 
- .villanItem{
+ .villainItem{
  	margin-bottom: 5em;
  	border-style: solid;
  }
