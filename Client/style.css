@@ -36,6 +36,13 @@ body{
     align-items: center;
 }
 
+
+.middleBlock{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+}
+
 .topPart, .bottomPart {
     order: 0;
     flex: 1 1 auto;
@@ -69,7 +76,7 @@ body{
  }
 
 
- .heroCards{
+ .playerCards{
  	order: 0;
     flex: 1 1 auto;
     align-self: auto;
@@ -80,23 +87,12 @@ body{
     align-content: center;
  }
 
- #heroHand{
+ .playerCards.player0{
+    align-items:flex-end;
+ }
+
+ .playerCards.player1{
     align-items: flex-start;
- }
-
- #villainHand{
- 	align-items:flex-end;
- }
-
- .item{
- 	order: 0;
-    flex: 0 1 auto;
-    align-self: center;
-    margin: 1em;
- }
-
- .spanItem{
-
  }
 
  .card{
@@ -108,12 +104,28 @@ body{
     height: 100px;
  }
 
- .villainItem{
+ .playerItems{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;  
+ }
+
+ .playerItems .item{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    margin: 1em;
+ }
+
+ .playerItems.player0 .item{
  	margin-bottom: 5em;
  	border-style: solid;
  }
 
- .heroItem{
+ .playerItems.player1 .item{
  	margin-top: 5em;
  	border-style: solid;
  }

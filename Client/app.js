@@ -18,31 +18,39 @@ function pharsePhase(gso){
 }
 
 function renderGame(gso){
-	//Assign hero and villain for story mode
-	//mode is taken from gso.mode
-	let hero;
-	let villain;
+	displayPlayer(0, gso.players[0])
+	displayPlayer(1, gso.players[1])
+	// //Assign hero and villain for story mode
+	// //mode is taken from gso.mode
+	// let hero;
+	// let villain;
 
-	if(gso.players[gso.activePlayer].alignment=="hero"){
-		hero = gso.players[gso.activePlayer];
-		villain = gso.players[Math.abs(gso.activePlayer-1)];
-	} else {
-		hero = gso.players[Math.abs(gso.activePlayer-1)];
-		villain = gso.players[gso.activePlayer];
-	}
+	// if(gso.players[gso.activePlayer].alignment=="hero"){
+	// 	hero = gso.players[gso.activePlayer];
+	// 	villain = gso.players[Math.abs(gso.activePlayer-1)];
+	// } else {
+	// 	hero = gso.players[Math.abs(gso.activePlayer-1)];
+	// 	villain = gso.players[gso.activePlayer];
+	// }
 
-	document.getElementById("villainAvatar").innerHTML = villain.name;
-	document.getElementById("heroAvatar").innerHTML = hero.name;
+	// document.getElementById("villainAvatar").innerHTML = villain.name;
+	// document.getElementById("heroAvatar").innerHTML = hero.name;
 
-	displayCards(hero, "heroHand");
-	displayCards(villain, "villainHand");
+	// displayCards(hero, "heroHand");
+	// displayCards(villain, "villainHand");
 
+}
+
+function displayPlayer(n, player){
+	const p = ".player" + n;
+	document.querySelector(p + " .playerAvatar").innerHTML = player.name;
+	displayCards(player, p)
 }
 
 
 function displayCards(player, selector){
 	console.log(player.name);
-	let emptyCards = document.querySelectorAll("#"+selector+" div.card");
+	let emptyCards = document.querySelectorAll(selector+".playerCards .card");
 	for(let i=0; i<5; i++){
 		if(player.cards[i]){
 			emptyCards[i].innerHTML = player.cards[i].name;
