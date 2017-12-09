@@ -1,8 +1,21 @@
 const {ipcRenderer} = require('electron')
 ipcRenderer.on('GSO', (event, arg) => {
-  console.log(event, arg) // prints "pong"
-  renderGame(arg);
+  console.log(event, arg) // prints your GSO
+  pharsePhase(arg);
+
 })
+
+function pharsePhase(gso){
+	console.log("PHASE: "+gso.phase);
+	switch (gso.phase){
+	case "START":
+        renderGame(gso);
+        actionsForPlayer(gso.players[gso.activePlayer]);
+        break;
+    default:
+        renderGame(gso);
+	}
+}
 
 function renderGame(gso){
 	//Assign hero and villain for story mode
@@ -23,13 +36,13 @@ function renderGame(gso){
 
 	displayCards(hero, "heroHand");
 	displayCards(villain, "villainHand");
+
 }
 
 
 function displayCards(player, selector){
 	console.log(player.name);
 	let emptyCards = document.querySelectorAll("#"+selector+" div.card");
-
 	for(let i=0; i<5; i++){
 		if(player.cards[i]){
 			emptyCards[i].innerHTML = player.cards[i].name;
@@ -37,4 +50,8 @@ function displayCards(player, selector){
 			emptyCards[i].innerHTML = "empty";
 		}
 	}
+}
+
+function actionsForPlayer(player){
+	console.log("ACTIVE PLAYER: "+player.name);
 }

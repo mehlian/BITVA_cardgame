@@ -117,3 +117,8 @@ body{
  	margin-top: 5em;
  	border-style: solid;
  }
+
+ .available{
+    display: block;
+    background-color: green; 
+ }
