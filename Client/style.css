@@ -101,7 +101,10 @@ body{
     align-self: auto;
     margin: 1em;
     border-style: solid;
+    border-color: black;
     height: 100px;
+    background-size: 100% 100%;
+    color: red;
  }
 
  .playerItems{

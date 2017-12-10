@@ -53,7 +53,10 @@ function displayCards(player, selector){
 	let emptyCards = document.querySelectorAll(selector+".playerCards .card");
 	for(let i=0; i<5; i++){
 		if(player.cards[i]){
-			emptyCards[i].innerHTML = player.cards[i].name;
+			console.log(player.cards[i].name);
+			let addr = "../Assets/Cards/"+player.cards[i].img+".png";
+			emptyCards[i].style.backgroundImage = "url("+addr+")";
+			emptyCards[i].innerHTML = player.cards[i].value;
 		} else {
 			emptyCards[i].innerHTML = "empty";
 		}

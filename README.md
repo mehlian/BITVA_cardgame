@@ -15,4 +15,5 @@ Development steps:
 	Day 11: Greyboxing index.html with Flexbox
 	Day 12: Changed structure for better action analysis. Electron set up. Render initial stage.
 	Day 13: Active player rendering.
+	Day 14: Cards images. Only for testing purposes.
 
