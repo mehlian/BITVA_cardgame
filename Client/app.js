@@ -42,8 +42,9 @@ function renderGame(gso){
 }
 
 function displayPlayer(n, player){
-	const p = ".player" + n;
-	document.querySelector(p + " .playerAvatar").innerHTML = player.name;
+	let p = ".player" + n;
+	let a = "../Assets/Chars/"+player.character+".png";
+	document.querySelector(p + " .playerAvatar").innerHTML = "<img src='"+a+"'/>";
 	displayCards(player, p)
 }
 
@@ -53,7 +54,6 @@ function displayCards(player, selector){
 	let emptyCards = document.querySelectorAll(selector+".playerCards .card");
 	for(let i=0; i<5; i++){
 		if(player.cards[i]){
-			console.log(player.cards[i].name);
 			let addr = "../Assets/Cards/"+player.cards[i].img+".png";
 			emptyCards[i].style.backgroundImage = "url("+addr+")";
 			emptyCards[i].innerHTML = player.cards[i].value;

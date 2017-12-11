@@ -75,6 +75,10 @@ body{
     align-self: auto;
  }
 
+.playerAvatar img{
+    width: 60px;
+    height: 100px;
+}
 
  .playerCards{
  	order: 0;
