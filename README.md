@@ -17,4 +17,5 @@ Development steps:
 	Day 13: Active player rendering.
 	Day 14: Cards images. Only for testing purposes.
 	Day 15: Player images. Only for testing purposes.
+	Day 16: NEW YEAR! Started working on Items and Played.
 

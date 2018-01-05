@@ -50,7 +50,10 @@ function displayPlayer(n, player){
 
 
 function displayCards(player, selector){
-	console.log(player.name);
+	//console.log(player.name);
+	//console.log(selector);
+
+	//The hand
 	let emptyCards = document.querySelectorAll(selector+".playerCards .card");
 	for(let i=0; i<5; i++){
 		if(player.cards[i]){
@@ -60,6 +63,25 @@ function displayCards(player, selector){
 		} else {
 			emptyCards[i].innerHTML = "empty";
 		}
+	}
+	
+	//Played cards
+	let playedCards = document.querySelector(".middleBlock"+selector+" .played");
+	if (player.played.length==0){
+		playedCards.style.backgroundImage = "url(../Assets/Cards/blank.png)";
+	}else if (player.played.length==1) {
+		playedCards.style.backgroundImage = "url(../Assets/Cards/blank.png)";
+	} else {
+		playedCards.style.backgroundImage = "url(../Assets/Cards/blank.png)";
+	}
+
+	//The Item
+	let item = document.querySelector(".middleBlock"+selector+" .item");
+	if(player.item!=null){
+		item.style.backgroundImage = "url(.../Assets/Cards/"+player.item+".png)";
+	} else {
+		console.log(player.name);
+		item.style.backgroundImage = "url(../Assets/Cards/blank.png)";
 	}
 }
 
