@@ -20,25 +20,6 @@ function pharsePhase(gso){
 function renderGame(gso){
 	displayPlayer(0, gso.players[0])
 	displayPlayer(1, gso.players[1])
-	// //Assign hero and villain for story mode
-	// //mode is taken from gso.mode
-	// let hero;
-	// let villain;
-
-	// if(gso.players[gso.activePlayer].alignment=="hero"){
-	// 	hero = gso.players[gso.activePlayer];
-	// 	villain = gso.players[Math.abs(gso.activePlayer-1)];
-	// } else {
-	// 	hero = gso.players[Math.abs(gso.activePlayer-1)];
-	// 	villain = gso.players[gso.activePlayer];
-	// }
-
-	// document.getElementById("villainAvatar").innerHTML = villain.name;
-	// document.getElementById("heroAvatar").innerHTML = hero.name;
-
-	// displayCards(hero, "heroHand");
-	// displayCards(villain, "villainHand");
-
 }
 
 function displayPlayer(n, player){
@@ -65,24 +46,42 @@ function displayCards(player, selector){
 		}
 	}
 	
-	//Played cards
+	//Played cards and the Deck
 	let playedCards = document.querySelector(".middleBlock"+selector+" .played");
+
+	let deckPlace = document.querySelector(selector+" .playerDeck");
+	let htmlStart = '<img src = "../Assets/Cards/'; 
+	let htmlEnd = '.png"/>';
+
 	if (player.played.length==0){
+		//No played cards yet, all in the deck
+		deckPlace.innerHTML = htmlStart+"deck_all"+htmlEnd
 		playedCards.style.backgroundImage = "url(../Assets/Cards/blank.png)";
-	}else if (player.played.length==1) {
-		playedCards.style.backgroundImage = "url(../Assets/Cards/blank.png)";
-	} else {
-		playedCards.style.backgroundImage = "url(../Assets/Cards/blank.png)";
+	}else if (player.played.length<5) {
+		//5 or less cards played others are in deck
+		deckPlace.innerHTML = htmlStart+"deck_1.3"+htmlEnd
+		playedCards.style.backgroundImage = "url(../Assets/Cards/empty.png)";
+	}else if (player.played.length<10) {
+		//10 or less cards played others are in deck
+		deckPlace.innerHTML = htmlStart+"deck_2.3"+htmlEnd
+		playedCards.style.backgroundImage = "url(../Assets/Cards/deck_1.3.png)";
+	}else {
+		//more than 10 cards played
+		deckPlace.innerHTML = htmlStart+"deck_empty"+htmlEnd
+		playedCards.style.backgroundImage = "url(../Assets/Cards/deck_2.3.png)";
 	}
 
 	//The Item
-	let item = document.querySelector(".middleBlock"+selector+" .item");
+	let item = document.querySelector(".middleBlock"+selector+" .touse");
 	if(player.item!=null){
+		//Doesn't have an item
 		item.style.backgroundImage = "url(.../Assets/Cards/"+player.item+".png)";
 	} else {
-		console.log(player.name);
+		//Has an item
 		item.style.backgroundImage = "url(../Assets/Cards/blank.png)";
 	}
+
+
 }
 
 function actionsForPlayer(player){

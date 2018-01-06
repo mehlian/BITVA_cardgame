@@ -38,8 +38,12 @@ body{
 
 .middleBlock{
     order: 0;
-    flex: 0 1 auto;
+    flex: 0 0.75 auto;
     align-self: center;
+}
+
+#logo{
+    flex: 0 1 auto;
 }
 
 .topPart, .bottomPart {
@@ -70,8 +74,13 @@ body{
 
  .playerAvatar, .playerDeck{
  	order: 0;
-    flex: 1 1 auto;
+    flex: 1 0.45 auto;
     align-self: auto;
+ }
+
+ .playerDeck img{
+    width: 40%;
+    height: 40%;
  }
 
 .playerAvatar img{
