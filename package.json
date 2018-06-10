@@ -5,8 +5,8 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "electron": "1.7.9",
-    "jest": "^21.2.1"
+    "electron": "^2.0.2",
+    "jest": "^23.0.1"
   },
   "scripts": {
     "test": "jest",
